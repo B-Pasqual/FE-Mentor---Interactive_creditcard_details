@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 375px;
+  height: 100vh;
+}
+
+/*! --------- Header -----------*/
+
+header {
+  height: 33vh;
+  background-image: url('images/mobile.png');
+  position: relative;
+}
+
+header div {
+  width: 75%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+}
+
+.card__front--container {
+  bottom: 50px;
+  left: 20px;
+  z-index: 5;
+}
+
+.card__back--container {
+  left: 70px;
+  bottom: 137px;
+}
+img {
+  width: 100%;
+}
+/*! ---------- Main ------------ form*/
+
+input {
+  border: 1px solid hsla(270, 3%, 87%, 0.825);
+  /* padding: 10px; */
+  border-radius: 8px;
+  height: 37px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+}
+
+form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  position: relative;
+}
+
+label {
+  color: hsl(278, 68%, 11%);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* !--------- First form container----------- */
+
+.name__input {
+  padding-left: 20px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(110, 115, 119, 0.419);
+  opacity: 1; /* Firefox */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Middle form container */
+
+.card__number--container {
+  display: flex;
+  justify-content: left;
+  column-gap: 2px;
+  width: 100%;
+  border: 1px solid hsla(270, 3%, 87%, 0.825);
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.card__number--container input {
+  width: 15%;
+  height: 37px;
+  font-size: 0.9rem;
+  padding: 0 0.3rem;
+  border: none;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*! ------------Last form container-------------- */
+.input__container3 {
+  display: flex;
+  column-gap: 10px;
+}
+
+.expiration__input--container {
+  margin-top: 0.45rem;
+}
+
+.input__container3 input {
+  width: 75px;
+  text-align: center;
+}
+
+.input__container4 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  row-gap: 0.6rem;
+}
+
+#secret__code {
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+button {
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 0.8rem 0;
+  border-radius: 5px;
+  margin: 0.5rem 0 0;
+  border: none;
+}
+
+/*! --- Error messages  */
+
+.error__message {
+  color: rgb(222, 34, 34);
+  font-size: 0.8rem;
+  position: absolute;
+  opacity: 0.7;
+  left: 10px;
+  margin-top: 2px;
+}
+
+#secret__code--error {
+  left: 180px;
+  display: none;
+}
+
+#exp__dates--error {
+  color: blue;
+  display: none;
+}
+
+#number__error--message {
+  color: green;
+  display: none;
+}
+
+#name__error--message {
+  color: orangered;
+  display: none;
+}
+
+/* todo -------------- Card style --------------- */
+.card__front--container p {
+  color: hsl(270, 3%, 87%);
+  position: absolute;
+}
+
+/* ------------ Front ------------- */
+#numbers__output {
+  bottom: -40px;
+  left: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#owner__name {
+  bottom: -75px;
+  left: 20px;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+#card__dates {
+  bottom: -75px;
+  left: 215px;
+  font-size: 0.9rem;
+}
+
+.bigger__circle {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.smaller__circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 27px;
+  left: 60px;
+}
+
+/* -----------Back ------------ */
+#card__cvc {
+  color: white;
+  position: absolute;
+  right: 35px;
+  top: 66px;
+  font-size: 0.8rem;
+}
+
+/* !------------ Registration done ------------ */
+.registration__done {
+  background-color: white;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  opacity: 0.9;
+  display: none;
+}
+
+.registration__done img {
+  width: 20%;
+}
+
+.complete__tittle {
+  font-size: 2rem;
+}
+
+.complete__message {
+  opacity: 0.4;
+}
+
+#confirm__btn {
+  transition: all 0.2s;
+  /* display: none; */
+  /* pointer-events: stroke; */
+}
+
+#confirm__btn:hover {
+  transform: scale(1.07);
+  box-shadow: 5px 7px 1px rgba(0, 0, 0, 0.219);
+}
+
+#confirm__btn:active {
+  transform: scale(1);
+  box-shadow: 0 0 0;
+}
+
+/* ! Media ------------------------- */
+
+@media (min-width: 1250px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.164);
+  }
+
+  header {
+    width: 400px;
+    height: 100%;
+    background-image: url('images/desktop.png');
+  }
+
+  .form__container {
+    padding: 0 22rem;
+  }
+
+  form {
+    max-width: 375px;
+    position: absolute;
+    bottom: 270px;
+  }
+
+  .card__front--container {
+    top: 100px;
+    left: 160px;
+  }
+
+  .card__back--container {
+    top: 290px;
+    left: 190px;
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Interactive Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="card__front--container">
+          <div class="bigger__circle"></div>
+          <div class="smaller__circle"></div>
+          <p id="numbers__output">0000 0000 0000 0000</p>
+          <p id="owner__name">JANE APPLESEED</p>
+          <p id="card__dates">00/00</p>
+          <img src="images/bg-card-front.png" alt="" />
+        </div>
+        <div class="card__back--container">
+          <p id="card__cvc">000</p>
+          <img src="images/bg-card-back.png" alt="" />
+        </div>
+      </header>
+      <main class="form__container">
+        <form class="form">
+          <div class="registration__done">
+            <img src="images/icon-complete.svg" alt="Check icon" />
+            <p class="complete__tittle">THANK YOU!</p>
+            <p class="complete__message">We've added you card details</p>
+            <button id="continue__button" type="button">Continue</button>
+          </div>
+          <div class="input__container1">
+            <label for="name__input">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              class="name__input"
+              placeholder="e.g Jane Appleseed"
+              id="name__input"
+              oninput="writeName()"
+            />
+            <p id="name__error--message" class="error__message">
+              Wrong format, letters only
+            </p>
+          </div>
+          <div class="input__container2">
+            <label for="card__number">CARD NUMBER</label>
+            <div class="card__number--container">
+              <input
+                class="card__box"
+                maxlength="4"
+                type="number"
+                name=""
+                id="card__number0"
+                placeholder="1589"
+                oninput="writeNumber()"
+              />
+              <input
+                class="card__box"
+                type="number"
+                name=""
+                id="card__number1"
+                placeholder="2698"
+                oninput="writeNumber()"
+              />
+              <input
+                class="card__box"
+                type="number"
+                name=""
+                id="card__number2"
+                placeholder="7852"
+                oninput="writeNumber()"
+              />
+              <input
+                class="card__box"
+                type="number"
+                name=""
+                id="card__number3"
+                placeholder="4587"
+                oninput="writeNumber()"
+              />
+            </div>
+            <p id="number__error--message" class="error__message">
+              No empty fields
+            </p>
+          </div>
+          <div class="input__container3">
+            <div class="expiration__container">
+              <label for="expiration">EXP. DATE (MM/YY)</label>
+              <div class="expiration__input--container">
+                <input
+                  type="number"
+                  name="expiration"
+                  id="expiration__month"
+                  placeholder="MM"
+                  oninput="writeDates()"
+                />
+                <input
+                  type="number"
+                  name="expiration"
+                  id="expiration__year"
+                  placeholder="YY"
+                  oninput="writeDates()"
+                />
+                <p id="exp__dates--error" class="error__message">
+                  Can't be blank
+                </p>
+                <p id="secret__code--error" class="error__message">
+                  Can't be blank
+                </p>
+              </div>
+            </div>
+            <div class="input__container4">
+              <label for="secret__code">CVC</label>
+              <input
+                type="number"
+                name=""
+                id="secret__code"
+                placeholder="e.g. 123"
+                oninput="writeCode()"
+              />
+            </div>
+          </div>
+          <button id="confirm__btn" type="button">Confirm</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
